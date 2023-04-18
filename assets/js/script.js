@@ -20,7 +20,7 @@ function mostrarTabla(data){
    //recorrer datos del digimon
    for(let temp of data){
     contenido.innerHTML+=
-    `<td><img src="${temp.img}" width="60" height="60" alt="foto"></td>
+    `<td><img src="${temp.img}" width="70" height="70" alt="foto"></td>
     <td>${temp.name}</td>
     <td>${temp.level}</td>`
       
@@ -51,7 +51,7 @@ contenido.style.display ="none"
        for(let temp of param){
      
         carta.innerHTML+=
-        ` <div class="card col-6 mx-auto" style="width:18rem">
+        ` <div class="card col-6 mx-auto bg-dark text-white py-5" style="width:18rem">
         <img src="${temp.img}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${temp.name}</h5>
@@ -60,3 +60,16 @@ contenido.style.display ="none"
        }
     
     }
+    
+    function mostrarLevel(){
+        var eleccion = document.getElementById("motivo").value;  
+        console.log(eleccion)
+    fetch(`https://digimon-api.vercel.app/api/digimon/level/${eleccion}`)
+    .then(response=>response.json())
+    .then(datos=>{
+        let data=(Object.values(datos));
+        console.log(data);
+        construirCarta(data)
+    })}
+
+  

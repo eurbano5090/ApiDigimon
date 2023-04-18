@@ -1,3 +1,35 @@
+body{
+    background: #DBE3E8;
+}
+
 #section{
     padding-top: 3.5rem;
+}
+.navbar{
+    background:#00c4cc;
+    font-size: larger;
+    font-weight: 400;
+}
+footer{
+    background-color: #fbc512;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #152534;
+}
+input{
+    border-radius: 0.5rem;
+}
+#tabla{
+    font-size: 24px;
+}
+
+.card{
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+}
+.card:hover{
+    transform: scale3d(1.5, 1.5, 0.3);
+        -webkit-transform: scale3d(1.5, 1.5, 0.3);
+        -moz-transform: scale3d(1.5, 1.5, 0.3);
 }
